@@ -7,4 +7,6 @@ gitcreds::gitcreds_set()
 
 mtcars |>
   View()
-#12346
+
+usethis::use_github()
+2
