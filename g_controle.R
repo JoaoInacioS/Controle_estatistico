@@ -22,7 +22,7 @@ g_controle(vari,lsc,lic,lm)
 
 g_controle_compl<-function(dados,cal=c("media","ampli","desvio"),met=c("ampli","desvio"),labx="Amostras",laby="Valor"){
   # "Dados" entra um data frame.
-  dados1<-as.matrix(dados)[,-1]
+  dados1<-as.matrix(dados)
   x1<-t(dados1)
   x2<-colMeans(x1) # Media das colunas(amostra)
   x3<-mean(x2) # Media da media das colunas(amostra)
