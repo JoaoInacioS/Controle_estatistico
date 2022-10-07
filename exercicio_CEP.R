@@ -1,5 +1,5 @@
-dados<- readxl::read_excel("GC - variáveis parte 1.xlsx")
-dados1<-as.matrix(dados)[,-1]
+dados<- readxl::read_excel("GC - variáveis parte 1.xlsx")[,-1]
+dados1<-as.matrix(dados)
 x1<-t(dados1)
 
 x2<-colMeans(x1) # Media das colunas(amostra)
@@ -59,7 +59,7 @@ a2<-rep(lsc,n) # Limite superior (LSC)  rep(LSC,n)
 b2<-rep(lic,n) # Limite inferior (LIC)  rep(LIC,n)
 lines(a2,col=3) # plot da linha LSC (col=3 <=> cor verde) (limite p/ s)
 lines(b2,col=3) # plot da linha LIC (col=3 <=> cor verde) (limite p/ s)
-#
+#====
 lines(a,col=2) # plot da linha LSC (col=2 <=> cor vermelha) (limite p/ P)
 lines(b,col=2) # plot da linha LIC (col=2 <=> cor vermelha) (limite p/ P)
 
